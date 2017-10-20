@@ -1,0 +1,23 @@
+{% extends "master.html" %}
+{% block title %}{% endblock %}
+{% block content %}
+
+<div class="mdc-card">
+  <section class="mdc-card__primary">
+    <h1 class="mdc-card__title mdc-card__title--large">Upload Yor DataSet</h1>
+  </section>
+  <section class="mdc-card__supporting-text">
+    For prescribed format of csv file see <a href="/note">here</a>
+    <br />
+    <br/>
+    <br/>
+    <form action="{{url_for('plot_func')}}" legend="Prediction Details" method='POST' enctype='multipart/form-data'>
+				<input type="file" name="pic" accept="*.csv">
+			  <br>
+			  <br>
+  			<input type="submit" class="mdc-button mdc-button--accent">
+		</form>
+  </section>
+</div>
+
+{% endblock %}

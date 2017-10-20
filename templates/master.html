@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='mdc.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='app.css') }}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+</head>
+<body>
+    <aside class="mdc-temporary-drawer mdc-typography">
+        <nav class="mdc-temporary-drawer__drawer">
+            <header class="mdc-temporary-drawer__header">
+            <div class="mdc-temporary-drawer__header-content">
+                Markex | Curieo
+            </div>
+            </header>
+            <nav id="icon-with-text-demo" class="mdc-temporary-drawer__content mdc-list">
+            <a class="mdc-list-item mdc-temporary-drawer--selected" href="https://guide.curieo.io/">
+                <i class="material-icons mdc-list-item__start-detail" aria-hidden="true">code</i>Curieo Guide
+            </a>
+            <br>
+            <br>
+            <img src="{{ url_for('static', filename='Curieo.png') }}" style="margin-left: 20px;">
+            
+            </nav>
+        </nav>
+    </aside>
+
+    <header class="mdc-toolbar mdc-toolbar--fixed">
+        
+                    <div class="mdc-toolbar__row">
+                        <!-- This row will anchor on top of screen -->
+                        <section class="mdc-toolbar__section mdc-toolbar__section--align-start mdc-toolbar__section--shrink-to-fit">
+                            <a href="#" class="material-icons menu mdc-toolbar__icon--menu">menu</a>
+                        </section>
+
+                        <a href="/" style="color: white; text-decoration: none;">
+                        <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                            <div class="mdc-toolbar__title">Markex | Curieo</div>
+                        </section>
+                        </a>
+                    </div>
+    </header>
+
+    <main class="mdc-toolbar-fixed-adjust">
+        <br>
+        <br>
+        <center><img src="{{ url_for('static', filename='logo.png') }}"><center>
+        <center><h1 class="mdc-typography--body2">{{ self.title() }}</h1></center>
+        {% block content %}{% endblock %}
+    </main>
+
+    <center><p class="mdc-typography--body2"> Curieo Team </p> </center>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='mdc.js') }}"></script>
+    <script>window.mdc.autoInit();</script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

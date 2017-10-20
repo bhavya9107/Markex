@@ -1,0 +1,63 @@
+{% extends "master.html" %}
+{% block title %}Markex: Results{% endblock %}
+{% block content %}
+
+<div class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell">
+    	<div class="mdc-card">
+		  <section class="mdc-card__primary">
+		    <h1 class="mdc-card__title mdc-card__title--large">Download Results</h1>
+		  </section>
+		  <section class="mdc-card__supporting-text">
+		    Prections are added to 'prediction' column in csv
+		  </section>
+		  <section class="mdc-card__actions">
+		    <a href="/output">
+		    	<button class="mdc-button mdc-button--compact mdc-card__action">Download</button>
+		    </a>
+		  </section>
+		</div>
+    </div>
+    <div class="mdc-layout-grid__cell">
+    	<div class="mdc-card">
+		  <section class="mdc-card__primary">
+		    <h1 class="mdc-card__title mdc-card__title--large">Accuracy</h1>
+		  </section>
+		  <section class="mdc-card__supporting-text">
+		    <h1>{{ accuracy }} % </h1>
+		  </section>
+		</div>
+    </div>
+    <div class="mdc-layout-grid__cell">
+    	<div class="mdc-card">
+		  <section class="mdc-card__primary">
+		    <h1 class="mdc-card__title mdc-card__title--large">Yes percentage</h1>
+		  </section>
+		  <section class="mdc-card__supporting-text">
+		    <h1>{{ yesp }} %</h1>
+		  </section>
+		</div>
+    </div>
+  </div>
+</div>
+
+<div class="mdc-card">
+		  <section class="mdc-card__primary">
+		    <h1 class="mdc-card__title mdc-card__title--large">Month wise distribution</h1>
+		  </section>
+		  <section class="mdc-card__supporting-text">
+		    {{ p1 | safe }}
+		  </section>
+</div>
+
+<div class="mdc-card">
+		  <section class="mdc-card__primary">
+		    <h1 class="mdc-card__title mdc-card__title--large">Age wise distribution</h1>
+		  </section>
+		  <section class="mdc-card__supporting-text">
+		    {{ p2 | safe }}
+		  </section>
+</div>
+
+{% endblock %}

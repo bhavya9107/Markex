@@ -1,0 +1,64 @@
+:root {
+    --mdc-theme-primary: #fe8756;
+    --mdc-theme-accent: #7867fe;
+}
+
+.mdc-card__media {
+  background: url("/assets/back.jpg") #fe8756;
+  background-position: right center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+}
+
+.mdc-grid-tile{
+  width: 150px;
+  padding: 50px;
+}
+
+.logo{
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: -60px auto;
+  margin-bottom: 10px;
+  border-radius: 50px;
+}
+
+#greeting-form > button {
+  margin-top: 8px;
+}
+
+.mdc-temporary-drawer__header{
+    background: #fe8756;
+    color: white;
+}
+
+html,
+main,
+body{
+    background: #fee;
+}
+.mdc-card{
+    margin: 10px auto;
+    background: white;
+    max-width: 700px;
+    text-align: center;
+}
+
+.app-fab--absolute.app-fab--absolute {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+@media(min-width: 1024px) {
+   .app-fab--absolute.app-fab--absolute {
+    bottom: 1.5rem;
+    right: 1.5rem;
+  }
+}
+
+.mdc-list{
+  text-align: left;
+}

@@ -1,0 +1,78 @@
+<html>
+	<head><title>NOTE</title>
+
+        <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.indigo-deep_purple.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+	<body style="background:#eee">
+        <br>
+        <a href="/" style="display: inline-block; margin-left: 10px;">
+            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+                <i class="material-icons">keyboard_arrow_left</i>
+              </button>
+            </a>
+            <b><span style="color:#6578ef; display: inline;">back to main page</span></b>
+            <br>
+            <br>
+	
+		
+        <ul class="mdl-shadow--2dp main" style="background: white; width: 90vw; margin: 0 auto;">
+            <li class="mdl-list__item" style="border-bottom: 2px solid #6578ef;">
+                <br>
+            <h2 style="font-family: 'Exo 2', sans-serif; color: #6578ef; display: block;">Format Of Dataset Supported</h2>
+            </li>
+            
+               <li class="mdl-list__item" style="text-align: center; border-bottom: 2px solid #6578ef;">
+                
+                <h5 style="
+                           font-family: 'Exo 2', sans-serif; 
+                           color: #ef4554; 
+                           ">As of now ,only .csv is the supported format.</h5></li>
+            
+                <h5 style="
+                           font-family: 'Exo 2', sans-serif; 
+                           color: #6578ef; 
+                           overflow: auto;
+                           ">The format of .csv file must follow this format:</br></br>
+                          	age,job	marital,education,default balance,housing loan,contact,day,month,duration,campaign,pdays,previous,poutcome,y.</br>
+                          	Description of above data is as follows:</br></br></hr>
+                          		# bank client data:</br>
+1 - age (numeric)</br>
+2 - job : type of job (categorical: 'admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown')</br>
+3 - marital : marital status (categorical: 'divorced','married','single','unknown'; note: 'divorced' means divorced or widowed)</br>
+4 - education (categorical: 'basic.4y','basic.6y','basic.9y','high.school','illiterate','professional.course','university.degree','unknown')</br>
+5 - default: has credit in default? (categorical: 'no','yes','unknown')</br>
+6 - housing: has housing loan? (categorical: 'no','yes','unknown')</br>
+7 - loan: has personal loan? (categorical: 'no','yes','unknown')</br></br></hr>
+# related with the last contact of the current campaign:</br>
+8 - contact: contact communication type (categorical: 'cellular','telephone') </br>
+9 - month: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')</br>
+10 - day_of_week: last contact day of the week (categorical: 'mon','tue','wed','thu','fri')</br>
+11 - duration: last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.</br></br></hr>
+# other attributes:</br>
+12 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)</br>
+13 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric; 999 means client was not previously contacted)</br>
+14 - previous: number of contacts performed before this campaign and for this client (numeric)</br>
+15 - poutcome: outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')</br>
+# social and economic context attributes</br>
+16 - emp.var.rate: employment variation rate - quarterly indicator (numeric)</br>
+17 - cons.price.idx: consumer price index - monthly indicator (numeric) </br>
+18 - cons.conf.idx: consumer confidence index - monthly indicator (numeric) </br>
+19 - euribor3m: euribor 3 month rate - daily indicator (numeric)</br>
+20 - nr.employed: number of employees - quarterly indicator (numeric)</br></br>
+</hr>
+Output variable (desired target):</br>
+21 - y - has the client subscribed a term deposit? (binary: 'yes','no')</br>
+                          	</h5></li>
+
+        </ul>
+
+    
+
+
+	</body>
+</html>
